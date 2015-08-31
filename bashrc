@@ -34,15 +34,15 @@ xterm*|rxvt*)
     ;;
 esac
 
+# preset aliases used for all configs
+if [ -f ~/.bash_preset_aliases ]; then
+    . ~/.bash_preset_aliases
+fi
+
+# user-defined aliases, let's keep things as standard as we can :-)
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
-
-# to define extra options, define them in this file
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_custom
-fi
-
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
